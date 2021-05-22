@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/HeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:visibility="gone" />
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:autoFocusButtonColor="@android:color/white"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@android:color/white"
+        app:flashButtonVisible="true"
+        app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameColor="@android:color/white"
+        app:frameCornersRadius="0dp"
+        app:frameCornersSize="50dp"
+        app:frameSize="0.75"
+        app:frameThickness="2dp"
+        app:maskColor="#6C000000" />
+
+    <ImageView
+        android:id="@+id/logo_owasp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:contentDescription="@string/owasp_logo"
+        android:src="@drawable/ic_owasp_logo"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scanner_view"
+        android:layout_margin="10dp"
+        android:ems="20"
+        android:text="@string/scan"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_id"
+        android:layout_margin="10dp"
+        android:ems="20"
+        android:hint="@string/url"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textUri"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/url"
+        android:layout_margin="10dp"
+        android:autofillHints="username"
+        android:ems="20"
+        android:hint="@string/username"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_margin="10dp"
+        android:autofillHints="password"
+        android:ellipsize="start"
+        android:ems="20"
+        android:hint="@string/password"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/aqua_blue"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_resume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/resume_scan_button"
+        android:src="@android:drawable/ic_media_play"
+        android:visibility="gone"
+        app:backgroundTint="@color/aqua_blue"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/resume_scan_button"
+        android:src="@android:drawable/ic_menu_delete"
+        android:visibility="invisible"
+        app:backgroundTint="@color/aqua_blue"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>

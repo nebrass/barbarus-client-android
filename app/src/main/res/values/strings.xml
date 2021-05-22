@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OWASP Barbarus</string>
+    <string name="scan">Scan Barbarus QR</string>
+    <string name="url">Server URL</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="authentication_success">Authentication Done!</string>
+    <string name="logout_success">Logout Done!</string>
+    <string name="submit">SUBMIT</string>
+    <string name="done">Success</string>
+    <string name="about">About</string>
+    <string name="title_activity_about">About</string>
+    <string name="about_content">OWASP Barbarus is a secure login authentication platform for web applications. Barbarus offers a secure mechanism of login authentication through a smartphone.</string>
+    <string name="about_url">https://github.com/nebrass/owasp-barbarus-specs</string>
+    <string name="resume_scan_button">Resume scan button</string>
+    <string name="owasp_logo">OWASP Logo</string>
+    <string name="connected">Connected</string>
+</resources>
